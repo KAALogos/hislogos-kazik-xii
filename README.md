@@ -1,6 +1,6 @@
-# HiSLogos — Kazik / Operacja: znak zapytania
+# HiSLogos — Uczeń / Operacja: znak zapytania
 
-Interaktywna strona dla Kazika (12 lat) oparta na autorskim teście działu XII **Europa w XVII i XVIII wieku**, skanie rozwiązań `SCAN0004.PDF`, kluczu HiSLogos oraz 16 znakach zapytania zaznaczonych przez ucznia.
+Interaktywna strona dla ucznia oparta na autorskim teście działu XII **Europa w XVII i XVIII wieku**, skanie rozwiązań ucznia, kluczu HiSLogos oraz 16 znakach zapytania zaznaczonych przez ucznia.
 
 ## Co zawiera
 
@@ -12,10 +12,10 @@ Interaktywna strona dla Kazika (12 lat) oparta na autorskim teście działu XII 
 
 ## GitHub Pages — publikacja
 
-1. Utwórz repozytorium na GitHub, np. `hislogos-kazik-xii`.
+1. Utwórz repozytorium na GitHub, np. `hislogos-xii-europa`.
 2. Wgraj **całą zawartość tego katalogu** do katalogu głównego repozytorium: `index.html`, `style.css`, `content.js`, `app.js` i folder `assets`.
 3. W repozytorium przejdź do **Settings → Pages → Build and deployment → Deploy from a branch**; wybierz `main` i `/ (root)`, a następnie zapisz.
-4. Po opublikowaniu strona będzie dostępna pod adresem `https://<login>.github.io/hislogos-kazik-xii/` (jeśli tak nazwiesz repozytorium).
+4. Po opublikowaniu strona będzie dostępna pod adresem `https://<login>.github.io/hislogos-xii-europa/` (jeśli tak nazwiesz repozytorium).
 
 **Nie potrzeba Node.js, instalacji, kont użytkowników, kluczy API ani backendu.** Stronę można również otworzyć lokalnie przez dwukrotne kliknięcie `index.html`.
 
@@ -25,10 +25,7 @@ Stan ćwiczeń zapisuje się **lokalnie w przeglądarce i urządzeniu**. GitHub 
 
 ## Zakres i weryfikacja
 
-- Test ucznia: `SCAN0004.PDF` (25 odpowiedzi).
-- Arkusz: https://docs.google.com/document/d/1jC400_AFs9SpOGXolH6JDKxeP-_lxzrFh16XpbXRiwI/edit
-- Klucz: https://docs.google.com/document/d/1vwlnX4Pl34kyT6Pqe1LPdtrsOyTwHAPCXwQsPmZbWjE/edit
-- Baza i samoocena: https://docs.google.com/spreadsheets/d/1JiAxzti2_Jizdw90yOX2xIQkrynd5140ZMJ_f4YNiRI/edit
+- Test ucznia: 25 odpowiedzi.
 
 W wyjaśnieniach świadomie zachowano różnicę między normą prawa a praktyką społeczną, obrazem a źródłem do rekonstrukcji ustroju oraz datą sporządzenia mapy a datą przedstawianej sytuacji. To nie jest przedruk konkursu MKO ani jego oficjalny klucz.
 
@@ -45,4 +42,4 @@ Teksty i kod aplikacji przygotowano na potrzeby niekomercyjnego treningu HiSLogo
 
 ## Pojedynczy plik HTML
 
-Osobno przygotowano wersję `HiSLogos_Kazik_XII_INTERAKTYWNY.html`: samodzielny dokument zawierający HTML, CSS, JavaScript i awaryjne kopie trzech rzeczywistych ilustracji. Wystarczy zmienić jego nazwę na `index.html` i wgrać do repozytorium (zamiast zestawu kilku plików). Wersja samodzielna również korzysta opcjonalnie z dokładniejszych oryginałów w Wikimedia Commons, gdy jest dostępna sieć.
+Osobno przygotowano wersję `HiSLogos_XII_INTERAKTYWNY.html`: samodzielny dokument zawierający HTML, CSS, JavaScript i awaryjne kopie trzech rzeczywistych ilustracji. Wystarczy zmienić jego nazwę na `index.html` i wgrać do repozytorium (zamiast zestawu kilku plików). Wersja samodzielna również korzysta opcjonalnie z dokładniejszych oryginałów w Wikimedia Commons, gdy jest dostępna sieć.

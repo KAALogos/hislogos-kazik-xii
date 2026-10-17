@@ -1,7 +1,7 @@
-/* HiSLogos / Kazik — samodzielna aplikacja bez backendu i bibliotek. */
+/* HiSLogos / Uczeń — samodzielna aplikacja bez backendu i bibliotek. */
 'use strict';
 (() => {
-  const STORAGE = 'hislogos-kazik-xii-v1';
+  const STORAGE = 'hislogos-xii-v1';
   const $ = s => document.querySelector(s);
   const view = $('#view');
   const total = DATA.exercises.length;
@@ -48,7 +48,7 @@
   }
   function updateAudit(n){const box=$('#audit-info');if(!box)return;const i=n-1,u=DATA.observed.uncertain.includes(n),bad=DATA.observed.answers[i]!==DATA.observed.key[i];
     const module=DATA.modules.find(m=>m.refs.includes(n));const note=DATA.observed.notes[n]|| (u?'Odpowiedź trafna mimo zgłoszonej niepewności: warto umieć uzasadnić ją bez podpowiedzi.':'Odpowiedź trafna. W skanie nie ma pytajnika — nie oznacza to automatycznie pełnej pewności.');
-    box.innerHTML=`<strong>Zadanie ${n}: ${safe(DATA.observed.topics[i])}</strong><p>Kazik: <b>${DATA.observed.answers[i]}</b> · klucz: <b>${DATA.observed.key[i]}</b> · ${bad?'<span style="color:var(--bad)">błąd</span>':'<span style="color:var(--good)">dobrze</span>'} · ${u?'zaznaczony pytajnik':'bez pytajnika'}. ${safe(note)}</p>${module?`<button class="plain-action" data-go="${module.id}">Przećwicz w module „${safe(module.label)}” →</button>`:''}`;
+    box.innerHTML=`<strong>Zadanie ${n}: ${safe(DATA.observed.topics[i])}</strong><p>Uczeń: <b>${DATA.observed.answers[i]}</b> · klucz: <b>${DATA.observed.key[i]}</b> · ${bad?'<span style="color:var(--bad)">błąd</span>':'<span style="color:var(--good)">dobrze</span>'} · ${u?'zaznaczony pytajnik':'bez pytajnika'}. ${safe(note)}</p>${module?`<button class="plain-action" data-go="${module.id}">Przećwicz w module „${safe(module.label)}” →</button>`:''}`;
     document.querySelectorAll('[data-audit]').forEach(el=>el.setAttribute('aria-pressed',String(Number(el.dataset.audit)===n)));
   }
   function modulePage(m){
@@ -140,7 +140,7 @@
     try{
       if(f.size>2000000)throw Error('Zbyt duży plik');
       const obj=JSON.parse(await f.text());
-      if(obj?.app!=='HiSLogos / Kazik'||!obj.exercises||typeof obj.exercises!=='object')throw Error('Niepoprawny format pliku');
+      if(obj?.app!=='HiSLogos / Uczeń'||!obj.exercises||typeof obj.exercises!=='object')throw Error('Niepoprawny format pliku');
       const ids=new Set(DATA.exercises.map(q=>q.id));
       const imported=Object.entries(obj.exercises).filter(([id,v])=>ids.has(id)&&v&&['mastered','recovered','review'].includes(v.status));
       if(!imported.length)throw Error('Brak prawidłowych postępów w pliku');
@@ -152,6 +152,6 @@
   $('#image-dialog-close').addEventListener('click',()=>$('#image-dialog').close());
   $('#image-dialog').addEventListener('click',e=>{if(e.target.id==='image-dialog')e.target.close()});
   window.addEventListener('hashchange',()=>{render();scrollTop()});
-  function exportProgress(){const data={app:'HiSLogos / Kazik',module:'XII — Europa XVII–XVIII',version:state.version,exported:new Date().toISOString(),originalTest:{score:17,max:25,uncertain:16},exercises:state.answers};const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(b);const a=document.createElement('a');a.href=url;a.download='HiSLogos_Kazik_XII_postepy.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Pobrano postępy.');}
+  function exportProgress(){const data={app:'HiSLogos / Uczeń',module:'XII — Europa XVII–XVIII',version:state.version,exported:new Date().toISOString(),originalTest:{score:17,max:25,uncertain:16},exercises:state.answers};const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(b);const a=document.createElement('a');a.href=url;a.download='HiSLogos_XII_postepy.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Pobrano postępy.');}
   render();
 })();

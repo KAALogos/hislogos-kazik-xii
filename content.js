@@ -1,4 +1,4 @@
-/* HiSLogos XII — treści autorskie. Dane oryginalnego testu w SCAN0004.PDF; klucz zweryfikowany z oryginalnym Google Docs. */
+/* HiSLogos XII — treści autorskie. Dane oryginalnego testu; klucz zweryfikowany z oryginalnym Google Docs. */
 'use strict';
 const DATA = {
   title: 'Europa w XVII i XVIII wieku',
@@ -48,7 +48,7 @@ const DATA = {
       quote:'Gdy uczysz się stylu lub idei, zapytaj nie tylko „jak wygląda?”, lecz także „czemu służy?”.',special:'kultura'
     },
     {
-      id:'mapa',n:'04',label:'Rzesza na mapie',title:'Europa jak mozaika',short:'Mapa z 1648 r. i potężne „???!” Kazika. Tu liczy się to, co naprawdę widać.',refs:[15,16],duration:'8 min',image:'mapa',
+      id:'mapa',n:'04',label:'Rzesza na mapie',title:'Europa jak mozaika',short:'Mapa z 1648 r. i potężne „???!” ucznia. Tu liczy się to, co naprawdę widać.',refs:[15,16],duration:'8 min',image:'mapa',
       intro:'Na mapie Europy po pokoju westfalskim Francja jest bardziej zwartym organizmem politycznym niż Rzesza. Rzesza składa się z licznych terytoriów o różnej władzy i statusie.',
       lessons:[
         {label:'POLITYCZNA MOZAIKA',title:'Dlaczego nie widać jednych Niemiec?',body:'Święte Cesarstwo Rzymskie obejmowało księstwa, wolne miasta i posiadłości kościelne. Miało cesarza i wspólne ramy ustrojowe, ale <strong>nie było scentralizowanym państwem narodowym</strong> na wzór późniejszych Niemiec.',more:'Pomost do historii Polski: pamiętasz rozbicie dzielnicowe? To inna epoka i inne przyczyny, ale podobna idea istnienia wielu ośrodków władzy.'},

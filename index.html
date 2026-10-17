@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101519">
+  <meta name="description" content="HiSLogos — interaktywny trening historii dla Kazika. Europa w XVII i XVIII wieku. Nauka, źródła i zadania bez zgadywania.">
+  <title>HiSLogos / Kazik — Operacja: znak zapytania</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="content.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div id="app" class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="Nawigacja po module">
+      <a href="#start" class="brand" data-go="home" aria-label="HiSLogos, strona główna">
+        <span class="brand-mark">H<span class="brand-dot">.</span></span>
+        <span class="brand-text"><b>HiSLogos</b><small>HISTORY LAB / 2026</small></span>
+      </a>
+      <div class="side-label">TWOJA MISJA</div>
+      <div class="side-heading">Europa<br><em>XVII–XVIII w.</em></div>
+      <div class="side-progress" aria-label="Postępy ćwiczeń">
+        <div class="side-progress-head"><span>Opanowane zadania</span><b id="side-progress-count">0/0</b></div>
+        <div class="meter"><span id="side-progress-bar" style="width:0%"></span></div>
+      </div>
+      <div class="side-label nav-label">NAWIGACJA</div>
+      <nav class="chapter-nav" id="chapter-nav"></nav>
+      <div class="side-bottom">
+        <div class="source-mark"><span class="source-dot"></span> Oparte na arkuszu Kazika</div>
+        <button class="plain-action" id="save-export" type="button" title="Pobierz plik z postępami">↧ &nbsp;Eksportuj postępy</button>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <button id="nav-toggle" class="icon-button mobile-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false">☰</button>
+        <div class="breadcrumb"><span class="crumb-muted">HiSLogos</span><span class="slash">/</span><strong id="crumb-current">Centrum treningowe</strong></div>
+        <div class="top-actions">
+          <span class="offline-tag" title="Ćwiczenia działają bez serwera; postępy zapisują się na tym urządzeniu"><span class="status-pin"></span> Zapis lokalny</span>
+          <button class="icon-button" id="theme-switch" type="button" aria-label="Przełącz motyw">◐</button>
+          <button class="avatar" data-go="home" aria-label="Powrót do startu">K</button>
+        </div>
+      </header>
+      <main id="view" tabindex="-1" aria-live="polite"></main>
+      <footer class="footer"><span>HiSLogos © 2026 · Materiał edukacyjny, nieoficjalny</span><span>Nie zbiera danych · Działa na GitHub Pages</span></footer>
+    </div>
+    <div class="mobile-backdrop" id="mobile-backdrop" hidden></div>
+  </div>
+  <dialog id="image-dialog" class="image-dialog" aria-label="Powiększenie materiału historycznego">
+    <button id="image-dialog-close" class="dialog-close" type="button" aria-label="Zamknij powiększenie">×</button>
+    <img id="dialog-img" alt="">
+    <div id="dialog-caption" class="dialog-caption"></div>
+  </dialog>
+  <input type="file" id="import-file" accept="application/json,.json" hidden aria-label="Wczytaj zapis postępów">
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
